@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/modal.css">
+    <link rel="stylesheet" href="/hero.css">
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="./index.html" class="logo">Web<span class="logo__span">Shop</span></a>
+            <nav class="navigation">
+                <ul class="site-nav">
+                    <li class="site-nav__item">
+                        <p href="" class="site-nav__link" data-modal-signUp>Реєстрація</p>
+                    </li>
+                    <li class="site-nav__item" data-modal-signIn>
+                        <p href="" class="site-nav__link">Вхід</p>
+                    </li>
+                    <li class="site-nav__item" data-modal-feedback>
+                        <p href="" class="site-nav__link">Зворотний
+                            зв'язок</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container--padding">
+            <h1 class="hero__title">Ласкаво просимо в наш <br /> інтернет-магазин</h1>
+            <button type="button" class="btn" data-modal-order>Замовлення товару</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Форма для реєстрації -->
+    <div class="backdrop1 is-hidden" data-modal1 data-modal-gen>
+        <div class="modal">
+            <button type="button" class="modal__close-btn" data-modal-close>
+                <svg class="modal__icon">
+                    <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <form action="./index.html">
+                <h2 class="modal__title">Реєстрація</h2>
+                <label for="username" class="field__label">Ім'я користувача:</label>
+                <input class="field__input" type="text" id="username" name="username" required><br>
+                <label for="email" class="field__label">Email:</label>
+                <input class="field__input" type="email" id="email" name="email" required><br>
+                <label for="password" class="field__label">Пароль:</label>
+                <input class="field__input" type="password" id="password" name="password" required><br>
+                <button type="submit" class="btn modal-btn">
+                    Зареєструватися
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Форма для входу -->
+    <div class="backdrop2 is-hidden" data-modal2 data-modal-gen>
+        <div class="modal">
+            <button type="button" class="modal__close-btn" data-modal-close>
+                <svg class="modal__icon">
+                    <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <form action="/index.html">
+                <h2 class="modal__title">Вхід</h2>
+                <label for="login_email" class="field__label">Email:</label>
+                <input class="field__input" type="email" id="login_email" name="login_email" required><br>
+                <label for="login_password" class="field__label">Пароль:</label>
+                <input class="field__input" type="password" id="login_password" name="login_password" required><br>
+                <button type="submit" class="btn modal-btn">
+                    Увійти
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Форма для замовлення товару -->
+    <div class="backdrop3 is-hidden" data-modal3 data-modal-gen>
+        <div class="modal">
+            <button type="button" class="modal__close-btn" data-modal-close>
+                <svg class="modal__icon">
+                    <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <form action="/index.html">
+                <h2 class="modal__title">Замовлення товару</h2>
+                <label for="product_name" class="field__label">Назва товару:</label>
+                <input class="field__input" type="text" id="product_name" name="product_name" required><br>
+                <label for="quantity" class="field__label">Кількість:</label>
+                <input class="field__input" type="number" id="quantity" name="quantity" min="1" required><br>
+                <label for="delivery_address" class="field__label">Адреса доставки:</label>
+                <textarea id="delivery_address" name="delivery_address" required></textarea><br>
+                <button type="submit" class="btn modal-btn">
+                    Замовити
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Форма для зворотного зв'язку -->
+    <div class="backdrop4 is-hidden" data-modal4 data-modal-gen>
+        <div class="modal">
+            <button type="button" class="modal__close-btn" data-modal-close>
+                <svg class="modal__icon">
+                    <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <form action="/index.html">
+                <h2 class="modal__title">Зворотний зв'язок</h2>
+                <label for="feedback_name" class="field__label">Ім'я:</label>
+                <input class="field__input" type="text" id="feedback_name" name="feedback_name"><br>
+                <label for="feedback_email" class="field__label">Email:</label>
+                <input class="field__input" type="email" id="feedback_email" name="feedback_email"><br>
+                <label for="message" class="field__label">Повідомлення:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit" class="btn modal-btn">
+                    Надіслати
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
